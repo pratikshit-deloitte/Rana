@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    min-height: 100vh;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.leftContainer{
+    flex:1;
+    height: 100vh;
+    background: #F9F7FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-content{
+    font-size: 60px;
+    color: #6255A5;
+    padding: 20px;
+}
+
+
+
+
+
+.rightContainer{
+    flex:1;
+    height: 100vh;
+    width: 100%;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.hidden{
+    display: none;
+    font-size: 20px;
+    color: #6255A5;
+    margin-bottom: 20px;
+    
+}
+
+
+#form-container{
+}
+
+.signin-heading{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 5px;
+}
+
+.my-form-inputs{
+    display: block;
+    width: 369px;
+    height: 62px;
+    background: #F9F7FF;
+    border-radius: 6px;
+    margin:20px 0px;
+}
+
+input[type],select{
+    padding: 15px;
+    font-size: 16px;
+}
+
+.my-form-inputs:hover{
+    border: 2px solid #6255A5;    
+    /* border-color: #6255A5; */
+
+}
+
+::placeholder{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 33px;
+
+    /* identical to box height, or 206% */
+
+    color: #74757E;
+    /* padding: 15px; */
+}
+
+#pass-forget{
+    text-align: end;
+    margin-bottom: 20px;
+    color: #B0B0B0;
+}
+
+.form-btn{
+    background: #6255A5;
+    border-radius: 6px;
+    width: 369px;
+    height: 62px;
+    border: none;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 33px;
+    color: #FFFFFF;
+    transform: .3sec;
+}
+.form-btn:hover{
+    transform: scale(1.01);
+}
+
+.form-btn:hover{
+    transform: 1.2;
+}
+
+
+@media screen and (max-width: 800px) {
+    .container{
+        display: block;
+    }
+    .leftContainer {
+      display: none; 
+    } 
+    img{
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    .hidden{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .rightContainer{
+        /* margin: 10px 10px; */
+        /* height: 100vh; */
+    } 
+
+    
+  }
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Research & Sensing</title>
+    <link rel="stylesheet" type='text/css' href="{% static 'styles/login.css' %}">
+</head>
+
+
+<body>
+    <div class="container">  
+        
+        <div class="leftContainer">
+            <div class="left-box">
+                <img src="{% static 'images/Vectorlogo.png' %}"/>
+                <p class="left-content">Research & <br><br><br> Sensing</p>
+            </div>
+        </div>
+        <div class="rightContainer">
+            <form id="form-container">
+                <div class="hidden">
+                    <img src="{% static 'images/Vectorlogo.png' %}"/>
+                    <p >Research &  Sensing</p>
+                </div>
+                <h1 class="signin-heading" >Login</h1>
+                <input class="my-form-inputs" type="text" placeholder="Enter email or username">
+                <input class="my-form-inputs" type="password" placeholder="Password">
+                
+                <a href="#"><p id="pass-forget">Forgot password ?</p></a>
+                
+                <button class="form-btn" >Login</button>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

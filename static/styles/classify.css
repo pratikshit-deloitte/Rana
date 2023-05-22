@@ -1,0 +1,222 @@
+body{
+    margin: 0;
+    padding: 0;   
+}
+
+
+.container{
+    /* height: 90%; */
+    background-color:white;
+    padding: 4em 5em ;
+    color: black;
+}
+
+.intro{
+    width: 100%;
+    display: inline-block;
+    align-content: center; 
+    
+}
+
+.introLeft{
+    float: left;
+    max-width: 70%;
+    /* margin-right: 5px; */
+}
+
+.introRight{
+    float: right;
+    max-width: 30%;
+    margin-right: 1em;
+
+
+}
+.introRight button{
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.classifyData p{
+    color: #0D8390;
+}
+.classifyData{
+    display: flex;
+    flex-direction: row;
+}
+
+.introRight .popupClassify {
+    visibility: hidden;
+    background-color: white;
+    position: absolute;
+    
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    margin: 15em 6em;
+    /* width: 31em; */
+    min-width: 25%;
+    right: 0;
+    top:0;
+    
+}
+
+.rightData{
+    padding: 1.5rem;
+    box-shadow: 1px 3px rgba(0,0,0,0.1);
+    /* border:1px solid rgba(0,0,0,0.1); */
+    border-radius: 5px;
+    border: 1px solid #E9E9E9;
+    width:485px;
+}
+
+.inlineContent{
+    display: flex;
+    align-items: center;
+}
+
+.inlineContent img{
+    margin-right: 8px;
+}
+
+
+
+.introRight .show{
+    visibility: visible;
+}
+
+.fileUpload{
+    width: 100%;
+    margin-bottom: 8em;
+    /* background-color: aqua; */
+}
+
+.formFeilds{
+    display: flex;
+    justify-content: space-between;
+    height: 15em;
+    margin-bottom: 2em;
+}
+
+.formFeild{
+    flex: 1;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #F4F4F4;
+    border-radius: 5px;
+}
+
+.lable{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    background-color: #F4F4F4;
+    margin-bottom: 5px;
+}
+
+.lable label{
+    padding: .5em;
+    justify-content: center;
+}
+
+.input{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-submit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #0D8390; */
+    width: 100%;
+}
+
+
+
+.input-text{
+    /* flex:9; */
+    width:70%;
+    /* margin-right: 5px; */
+    margin-left: 15px;
+}
+
+.input-submit label{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+
+}
+
+.requestMsg{
+    /* width: 1000px; */
+    border-radius: 4px;
+}
+
+.input-text input{
+    height: 40px;
+    padding: 0px 12px;
+    border: 1px solid #D0D0CE;
+    width: 80%;
+    width: max-content;
+   
+}
+
+.btn{
+    float: right;
+    margin-right: 1em;
+    margin-left: 1em;
+    flex: 1;
+}
+
+.btn button{
+    padding: .8em;
+    background-color: #0D8390;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 40px;
+}
+
+.history{
+    margin-right: 1em;
+    margin-bottom: 25em;
+}
+
+.historyTitle{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    
+}
+
+.historyTitle button{
+    border: 1px solid #0D8390;
+    background-color: white;
+    height: 3em;
+    width: 3em;
+    cursor: pointer;
+}
+
+.filterImg{
+    position: relative;
+}
+
+.filterImg .popupFilter{
+    visibility: hidden;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    /* margin-top: 1em; */
+    width:25em;
+    border: 1px solid #F4F4F4;
+    padding: 1em 1em;
+    border-radius: 4px;
+} 

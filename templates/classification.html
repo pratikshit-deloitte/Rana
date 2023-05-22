@@ -1,0 +1,173 @@
+{% extends 'dashBase.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <title>Classify</title>
+    <link rel="stylesheet" type='text/css' href="{% static 'styles/classify.css' %}">
+</head>
+<body>
+    <div class="container">
+        <p style="height: 64px;font-weight: 600;color: #0d8390;font-size: 48px;margin:0;">Classification</p>
+        <div class="intro">
+            <div class="introLeft">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, consequatur ad? Natus, ut quis! Perferendis fugit enim officiis cumque natus minus dolorum voluptatem repudiandae qui voluptas. Repellat nam corrupti iste.</p>
+            </div>
+            <div class="introRight">
+                <div class="classifyData">
+                    <button  onclick="myFunction()">
+                    <img  src="{% static 'images/question.png' %}"/> 
+                    <p>How to classify data?</p>
+                </button>
+            </div>
+                
+
+                <div class="popupClassify" id="popupClassify">
+                    <div class="rightData">
+
+                    
+                    <h1 style="margin:0;font-size: 24px;font-weight: 700;">How to Classify Files?</h1>
+                    <hr>
+                    <p style="font-size: 14px;">You can easily classify the data with 3 steps.</p>
+                    <div class="inlineContent">
+                        <img  src="{% static 'images/uploadIcon.png' %}"/>
+                        <span  style="font-size: 14px;">Upload a Data file and Schema file or select Files from document library</span>
+                    </div>
+                    <div class="inlineContent">
+                        <img  src="{% static 'images/runIcon.png' %}"/>
+                        <span style="margin-top: 16px;margin-bottom: 16px; font-size: 14px;">Run Classificationand wait until classification is completed</span>
+                    </div>
+                    <div class="inlineContent">
+                        <img  src="{% static 'images/viewIcon.png' %}"/>
+                        <span style="font-size: 14px;">View the classified data and perform the actions like download/edit/save on the record</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="fileUpload">
+            <h3>Add files to classify</h3>
+            <form>
+                <div class="formFeilds">
+                    <div class="formFeild">
+                        <div class="lable">
+                            <label>Data File</label>
+                        </div>
+                        <div class="input">
+                            <input type="file">
+                        </div>
+                    </div>
+                    <div class="formFeild">
+                        <div class="lable">
+                            <label>Data2 File</label>
+                        </div>
+                        <div class="input">
+                            <input type="file">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="input-submit">
+                    <div class="input-text">
+                        <label>Classification Request Name</label>
+                        <input class="requestMsg" type="text" placeholder="Enter Classification Request Name">
+                    </div>
+                    
+                    <div class="btn">
+                        <button>Classify</button>
+                    </div>
+                </div> -->
+                <div class="input-submit">
+                    <label for="requestMsg" >Classification Request Name:</label>
+                    <div class="input-text" >
+                      <input id="requestMsg" class="requestMsg" type="text" placeholder="Enter Classification Request Name" style="width:100%;">
+                    </div>
+                    <div class="btn" style="width:20%; text-align: right;">
+                      <button type="submit">Classify</button>
+                    </div>
+                  </div>
+                  
+               
+            </form>
+        </div>
+
+        <div class="history">
+            <div class="historyTitle">
+                <p style="font-size: 32px;line-height: 64px;font-weight: 600;">Classification Requests</p>
+                <div class="filterImg">
+                    <button onclick="myFilter()">
+                        <img  src="{% static 'images/fillter.png' %}"/>
+                    </button>
+                    <div class="popupFilter" id="popupFilter">
+                        <p style="font-size: 24px;font-weight: 700;line-height: 32px;">Filter</p>
+                        <form>
+                            <label for="select1" >Requested By</label><br><br>
+                            <select id="select1" style="width: 100%; height: 40px;border-radius: 4px;padding: 0px 12px 0 12px;gap: 12px; border: 1px solid #D0D0CE;background-color: white;">
+                              <option value="option1">Option 1</option>
+                              <option value="option2">Option 2</option>
+                              <option value="option3">Option 3</option>
+                            </select><br><br>
+                            <label for="select2">Status</label><br><br>
+                            <select id="select2" style="width: 100%; height: 40px;border-radius: 4px;padding: 0px 12px 0 12px;gap: 12px; border: 1px solid #D0D0CE;background-color: white;">
+                              <option value="option1">Option 1</option>
+                              <option value="option2">Option 2</option>
+                              <option value="option3">Option 3</option>
+                            </select><br><br>
+                            <label for="date">Requested On</label><br><br>
+                            <input type="date" id="date" style="width: 93%; height: 40px;border-radius: 4px;padding: 0px 12px 0 12px;gap: 12px; border: 1px solid #D0D0CE;background-color: white;">
+                            <br>
+                            <!-- <button type="submit">Submit</button> -->
+                          </form>
+                    </div>
+                </div>
+            </div>
+            <div  style="border: 1px solid #f4f4f4 ;border-radius: 8px;">
+
+                <table  >
+                    <tr style="background-color: #D0D0CE;color: #53565A;">
+                        <th>Required Name</th>
+                        <th>Data Template</th>
+                        <th> Schema Template</th>
+                        <th>Status</th>
+                        <th>Request Time</th>
+                        <th>Output File</th>
+                        <th>Requested By</th>
+                        <th>Actions</th>
+                    </tr>
+                    {% for i in classify %}
+                    <tr>
+                        <th>{{i.request}} </th>
+                        <th>{{i.data}} </th>
+                        <th>{{i.schema}}</th>
+                        <th>{{i.status}} </th>
+                        <th>{{i.date}} </th>
+                        <th>{{i.output}}</th>
+                        <th>{{i.user}} </th>
+                        <th>icon icon icon </th>
+                    </tr> 
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    
+</body>
+
+<script>
+    // When the user clicks on div, open the popup
+    function myFunction() {
+      var popup = document.getElementById("popupClassify");
+      popup.classList.toggle("show");
+    }
+    function myFilter() {
+      var popup = document.getElementById("popupFilter");
+      popup.classList.toggle("show");
+    }
+    
+    </script>
+
+{% endblock %}

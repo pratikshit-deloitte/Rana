@@ -1,0 +1,142 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    font-style: normal;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.nav{
+    /* position:fixed;
+    top: 0; */
+    height: 72px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: Open Sans;
+    font-style: normal;
+}
+
+h1{
+    color: black;
+    margin-bottom: 220px;
+    margin-top: 104px;
+    font-style: SemiBold;
+    line-height: 76px;
+    line-height: 100%;
+    font-size: 56px;
+}
+
+h2{
+    font-size: 48px;
+    line-height: 65px;
+    line-height: 100%;
+    color: #0D8390;
+    margin-bottom: 32;
+}
+
+label{
+    font-size: 14px;
+    line-height: 20px;
+    line-height: 105%;
+    font-weight: 600;
+}
+
+
+
+.leftNav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:4% ;
+    font-size: large;
+}
+
+.leftNav img:first-child { 
+    height: 17px;
+    width: 70px;
+ }
+
+.container{
+    display: flex;
+    justify-content: center;
+    /* background-color: #0D8390; */
+}
+
+.left{
+    flex:3;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    width: 100%;
+    margin-bottom: 30px;
+    min-width: 300px;
+}
+
+.right{
+    flex: 7;
+
+}
+
+/* #form-container{
+    width: 80%;
+} */
+
+.signin-heading{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 5px;
+    
+}
+
+.my-form-inputs{
+    display: block;
+    /* width: 420px; */
+    width: 80%;
+    height: 40px;
+    border: 1px solid #D0D0CE;
+    padding: 0px 12px;
+    border-radius: 4px;
+    margin:15px 0px;
+    gap: 12px;
+}
+
+input[type],select{
+    font-size: 14px;
+    line-height: 20px;
+    line-height: 105%;
+    color: #63666A;
+    
+}
+
+
+
+
+#form-btn{
+    background: #0D8390;
+    color: white;
+    border-radius: 4px;
+    width: 74px;
+    height: 44px;
+    padding: 12px 16px;
+    border: none;
+    gap: 4px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .right{
+        display: none;
+    }
+    .signin-heading{
+        margin-bottom: 0px;
+    }
+}
+

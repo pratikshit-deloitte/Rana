@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Research & Sensing</title>
+    <link rel="stylesheet" type='text/css' href="{% static 'styles/loginPage.css' %}">
+</head>
+
+<div class="nav">
+    <div class="leftNav">
+        
+            <img  src="{% static 'images/Deloitte.png' %}"/>
+        
+            <p>&nbsp | &nbsp Research & Sensing</p>  <!-- &nbse is used for space -->
+    </div>
+    
+</div>
+
+<div class="container">
+    <div class="left">
+            <div class="signin-heading">
+                <h1 >Research &  <br>Sensing</h1>
+            </div>
+            <div>
+
+                <h2 >Login</h2>
+            
+            <div>
+                <form id="form-container" method="POST" action="">
+                    {% csrf_token %}
+                    <label>Email Id </label>
+                    <input class="my-form-inputs" text="text" name="username" placeholder="Enter Email Id"/>
+            
+                    <label>Password </label>
+                    <input class="my-form-inputs" type="password" text="password" name="password" placeholder="Enter Password"/>
+                    <input id="form-btn" type="submit" value="Login"/>
+                </form>
+            </div>
+            </div>
+    </div>
+    <div class="right">
+        <img  src="{% static 'images/loginPage.png' %}"/>
+
+    </div>
+</div>
+
+

@@ -1,0 +1,61 @@
+{% extends 'dashBase.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type='text/css' href="{% static 'styles/home.css' %}">
+</head>
+<body>
+
+    
+    <div class="container">
+        <div class="intro">
+            <p>Welcome to</p>
+            <p class="heading">Research & Sensing</p>
+            <p>
+                Lorem ipsum adolor sit amet consectetur adipisicing elit. Nobis recusandae perspiciatis ipsa repellendus repellat quis debitis! Nisi reiciendis, esse quam explicabo minus aspernatur aliquam doloremque praesentium distinctio, exercitationem optio omnis.
+            </p>
+        </div>
+        <div class="lists">
+            <div class="list">
+                <img  src="{% static 'images/classificationColor.png' %}"/>
+                <h1>Classification</h1>
+                <p>Classify the companies into different categories at one click</p>
+                <div class="tryOut">
+                    <p>Try out now &nbsp</p>
+                    <a href="{% url 'testClassify' %}">
+                    <img  src="{% static 'images/arrowIcon.png' %}"/>
+                    </a>
+                </div>
+            </div>
+            <div class="list">
+                <img  src="{% static 'images/summaryColor.png' %}"/>
+                <h1>Summarization</h1>
+                <p>Classify the companies into different categories at one click</p>
+                <div class="tryOut">
+                    <p>Try out now &nbsp</p>
+                    <a href="{% url 'testSummary' %}">
+                    <img  src="{% static 'images/arrowIcon.png' %}"/>
+                    </a>
+                </div>
+            </div>
+            <div class="list">
+                <img  src="{% static 'images/libraryColor.png' %}"/>
+                <h1>Library</h1>
+                <p>View your project document and previouslyadded records</p>
+                <div class="tryOut">
+                    <p>Try out now </p>
+                    <a href="{% url 'testLibrary' %}">
+                        <img  src="{% static 'images/arrowIcon.png' %}"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+
+{% endblock %}
+

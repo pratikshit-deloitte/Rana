@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" type='text/css' href="{% static 'styles/dashBase.css' %}">
+</head>
+
+
+<body>
+    <div class="nav" style="position: sticky;">
+        <div class="leftNav">
+            <a href="{% url 'testDash' %}">
+                <img  src="{% static 'images/Deloitte.png' %}"/>
+            </a>
+                <p>&nbsp | &nbsp Research & Sensing</p>  <!-- &nbse is used for space -->
+        </div>
+        <div class="rightNav">
+            a
+        </div>
+    </div>
+    <div class="baseContainer">
+        <div class="sideBar">
+        <nav>
+            <ul style="margin-top: 5em;">
+              <li><a href="#">
+                <div id="classification" class="inlineLink">
+                    <img  src="{% static 'images/classificationIcon.png' %}"/>
+                    <p>Classification</p>
+                </div>
+                </a></li>
+              <li><a href="#">
+                <div id="summary" class="inlineLink">
+                    <img  src="{% static 'images/SummaryIcon.png' %}"/>
+                    <p>Summarization</p>
+                </div></a></li>
+              <li><a href="#">
+                <div id="library" class="inlineLink">
+
+                    <img  src="{% static 'images/libraryIcon.png' %}"/>
+                    <p>Document Library</p>
+                </div></a></li>
+            </ul>
+    
+            <ul class="bottom">
+                <li class=""><a href="#">
+                    <div id="setting" class="inlineLink">
+                        <img  src="{% static 'images/seetingsIcon.png' %}"/>
+                        <p>Settings</p>
+                </div></a></li>
+                <li ><a href="#">
+                    <div id="logout" class="inlineLink">
+                        <img  src="{% static 'images/logoutIcon.png' %}"/>
+                        <p>Logout</p>
+                    </div></a></li>
+            </ul>
+          </nav>
+          
+          
+    </div>
+    <div class="right" style="margin-left: 100px;">
+        
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</div>
+
+    
+<style>
+    nav {
+      background-color: #2E3032;
+      position: fixed;
+      /* top: 72px; */
+      left: 0;
+      height: 100%;
+      width: 100px;
+      display: flex;
+      transition: width 0.5s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content:space-between ;
+    }
+  
+    nav:hover {
+      width: 280px;
+    }
+  
+    nav ul {
+      padding: 0;
+      
+    }
+    nav ul li {
+        margin-bottom: 2em;
+        margin: 15px 5px;
+        padding: 0 10px;
+        /* border-radius: 20px; */
+    }
+    nav ul li p{
+      display: none;
+      font-weight: 500;
+      font-size: 16px;
+      
+    }
+    nav ul li img{
+      margin-right: 22px;
+    }
+  
+    nav ul li a {
+      color: #FFFFFF;
+      display: block;
+      text-align: left;
+      text-decoration: none;
+    }
+
+
+  
+    nav:hover ul li p{
+        display:contents;
+    }
+
+    .inlineLink{
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        padding: 0px 15px 0px 25px;
+        height:50px;
+        /* width: 100px; */
+        /* margin-right: 50px; */
+    }
+    
+    .bottom{
+      margin-bottom:100px;
+    }
+  </style>
+
+<script>
+
+
+    document.getElementById("classification").onclick=function(){
+        console.log("classifi");
+        document.getElementById("classification").setAttribute(
+            "style","background-color: #0D8390"
+        )
+        document.getElementById("summary").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("library").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("setting").setAttribute(
+            "style","background-color: transparent"
+        )
+    }
+
+    document.getElementById("summary").onclick=function(){
+        console.log("summary");
+        document.getElementById("summary").setAttribute(
+            "style","background-color: #0D8390"
+        )
+        document.getElementById("classification").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("library").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("setting").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("logout").setAttribute(
+            "style","background-color: transparent"
+        )
+    }
+
+    document.getElementById("library").onclick=function(){
+        console.log("library");
+        document.getElementById("library").setAttribute(
+            "style","background-color: #0D8390"
+        )
+        document.getElementById("classification").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("summary").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("setting").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("logout").setAttribute(
+            "style","background-color: transparent"
+        )
+    }
+
+    document.getElementById("setting").onclick=function(){
+        console.log("setting");
+        document.getElementById("setting").setAttribute(
+            "style","background-color: #0D8390"
+        )
+        document.getElementById("classification").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("summary").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("library").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("logout").setAttribute(
+            "style","background-color: transparent"
+        )
+    }
+
+    document.getElementById("logout").onclick=function(){
+        console.log("logout");
+        document.getElementById("logout").setAttribute(
+          "style","background-color:#0D8390"
+        )
+        document.getElementById("classification").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("summary").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("library").setAttribute(
+            "style","background-color: transparent"
+        )
+        document.getElementById("setting").setAttribute(
+            "style","background-color: transparent"
+        )
+    }
+
+</script>
+
+
+</body>
+
+
+</html>
+
